@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #eae;
+    padding-top: 2rem;
+}
+
+.site-title {
+    color: #eee;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 40%;
+}
+
+.row {
+    display: flex;
+}
+
+.placeholder {
+    width: 34%;
+    height: 50px;
+    border: 1px solid green;
+}
+
+.game-btns {
+    display: flex;
+    margin-top: 25px;
+    width: 40%;
+    flex-wrap: wrap;
+}
+
+.game-btn {
+    width: 33%;
+    height: 45px;
+    border: 1px solid black;
+    position: relative;
+    cursor: grab;
+}
+
+.cross::before {
+    content: 'X';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    color: #f9a828;
+    background: #3e4e3e;
+}
+
+.round::before {
+    content: 'O';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    color: #f9a828;
+    background: #3e4e3e;
+}
+
+.game-btn:active {
+    cursor: grabbing;
+}
+
+.hide.game-btn::before {
+    display: none;
+}
+
+.hovered {
+    background: #a3de83;
+}
